@@ -8,14 +8,14 @@ import Info from "../components/Home/Info"
 //import Menu from "../components/Home/Menu"
 //import Products from "../components/Home/Products"
 // import Contact from "../components/Home/Contact"
-const IndexPage = ({ data }) => {
+const AboutPage = ({ data }) => {
   return (
     <Layout>
       <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
       <BackgroundSection
         img={data.img.childImageSharp.fluid}
-        title="regular joe's"
-        styleClass="default-background"
+        title="About Us"
+        styleClass="about-background"
       />
       <Info />
       {/* <Menu items={data.menu} />
@@ -27,7 +27,7 @@ const IndexPage = ({ data }) => {
 
 export const query = graphql`
   {
-    img: file(relativePath: { eq: "default-background.jpeg" }) {
+    img: file(relativePath: { eq: "about-background.jpeg" }) {
       childImageSharp {
         fluid {
           ...GatsbyImageSharpFluid_tracedSVG
@@ -37,4 +37,4 @@ export const query = graphql`
   }
 `
 
-export default IndexPage
+export default AboutPage
