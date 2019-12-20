@@ -1,7 +1,6 @@
 import React, { Component } from "react"
 import Title from "../Globals/Title"
 import Img from "gatsby-image"
-import { FaFileExcel } from "react-icons/fa"
 const getCategories = items => {
   let tempItems = items.map(item => {
     return item.node.category
@@ -67,11 +66,13 @@ export default class Menu extends Component {
                     <div>
                       <Img fixed={node.image.fixed} />
                     </div>
+
                     <div className="flex-grow-1 px-3">
                       <div className="d-flex justify-content-between">
                         <h6 className="mb-0">{node.title}</h6>
                         <h6 className="text-yellow mb-0">${node.price}</h6>
                       </div>
+
                       <p className="text-muted">
                         <small>{node.description.description}</small>
                       </p>
