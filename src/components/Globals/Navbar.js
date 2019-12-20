@@ -2,6 +2,7 @@ import React, { Component } from "react"
 import { Link } from "gatsby"
 import logo from "../../images/logo.svg"
 import { FaCartArrowDown } from "react-icons/fa"
+import { Helmet } from "react-helmet"
 
 export default class Navbar extends Component {
   state = {
@@ -59,6 +60,14 @@ https://www.iconfinder.com/webalys */}
               )
             })}
 
+            <Helmet>
+              <link
+                href="https://cdn.snipcart.com/themes/2.0/base/snipcart.min.css"
+                rel="stylesheet"
+                type="text/css"
+              />
+              <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+            </Helmet>
             <li className="nav-item  ml-sm-5">
               <FaCartArrowDown className="cart-icon snipcart-checkout" />
             </li>
